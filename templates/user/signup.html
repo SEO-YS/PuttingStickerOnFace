@@ -19,20 +19,33 @@
                 <div class="text">또는</div>
                 <div class="line"></div>
             </div>
-                <form name="join" action="" method="post"> <!--post :암호화방식-->
-                    <input class = "addEmail" type="text"  placeholder="이메일 주소" >
-                    <input class = "name" type="text" placeholder="별명">
-                    <input class = "id" type="text" placeholder="사용자 이름">
-                    <input class = "pw" type="password" placeholder="비밀번호">
-                    <button class = "joinBtn" type="button">가입</button>
+                <form name="join" action="{% url 'user:signup' %}" method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="email"></label>
+                        <input class = "addEmail" type="text" name="email" id="email" placeholder="이메일 주소"
+                               value="{{ form.email.value|default_if_none:'' }}">
+                    </div>
+                    <div>
+                        <label for="username"></label>
+                        <input class = "name"  name="username" type="text" id="username" placeholder="사용자 이름">
+                    </div>
+                    <div>
+                    <label for="password1"></label>
+                    <input class = "id" name="password1" type="password" id="password1" placeholder="비밀번호"
+                    value="{{ form.password1.value|default_if_none:'' }}">
+                      </div>
+                     <div>
+                    <label for="password2"></label>
+                    <input class = "pw" name="password2" type="password" id="password2" placeholder="비밀번호 확인"
+                           value="{{ form.password2.value|default_if_none:'' }}">
+                      </div>
+                    <button class = "joinBtn" type="submit">가입</button>
                 </form>
-        </div>
-            <div class = "account_login">
-                <ul>
-                    <li>계정이 있으신가요?</li>
-                    <li><a href="{% url 'user:main' %}">로그인</a></li>
-                </ul>
-            </div>
+    </div>
+
+
+
         <script src="{% static 'js/signup.js' %}"></script>
 </body>
 
