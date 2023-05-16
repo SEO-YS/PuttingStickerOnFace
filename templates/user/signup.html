@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <head>
+    <title>SIGN-UP</title>
+    <link rel = "stylesheet" href="{% static 'css/signup.css' %}">
+    </head>
+    <body>
+    <div class="join_container">
+            <header class = "logo">
+                <img class = "brand_logo" src="{% static 'img/mainlogo.png' %}" alt="logo">
+                <ul>
+                    <li>당신의 사진을 꾸미고 싶으면</li>
+                    <li> 가입하세요.</li>
+                </ul>
+            </header>
+            <div class="or_line">
+                <div class="line"></div>
+                <div class="text">또는</div>
+                <div class="line"></div>
+            </div>
+                <form name="join" action="" method="post"> <!--post :암호화방식-->
+                    <input class = "addEmail" type="text"  placeholder="휴대폰 번호 또는 이메일 주소" >
+                    <input class = "name" type="text" placeholder="성명">
+                    <input class = "id" type="text" placeholder="사용자 이름">
+                    <input class = "pw" type="password" placeholder="비밀번호">
+                    <button class = "joinBtn" type="button" onclick="joinClick()"><a href="#">가입</a></button>
+                </form>
+        </div>
+            <div class = "account_login">
+                <ul>
+                    <li>계정이 있으신가요?</li>
+                    <li><a href="{% url 'user:main' %}">로그인</a></li>
+                </ul>
+            </div>
+        <script src="{% static 'js/signup.js' %}"></script>
+</body>
+
+
+
+{% endblock %}

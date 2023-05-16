@@ -1,0 +1,12 @@
+const btn = document.querySelector(".loginBtn");
+btn.addEventListener("click",function(e){
+    const inputId = document.querySelector('.id').value;
+    const inputPw = document.querySelector('.pwd').value;
+    if(inputId.includes('@') && inputPw.length > 4){
+        document.querySelector(".loginBtn").style.background = "rgb(46, 184, 223)";
+    }else{
+        alert("입력해 주세요");
+        document.querySelector(".loginBtn").style.background= "default";
+    }
+    return false; //경고창이 뜨면 넘어가지 않도록 설정
+});
