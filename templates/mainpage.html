@@ -6,38 +6,39 @@
     <link rel = "stylesheet" href="{% static 'css/login.css' %}">
     </head>
     <body>
-    <div style="position:relative">
-    <img style="width: 300px" src="{% static 'img/mainpage3.png' %}" alt="logo">
-        <div class="image1" style="position:absolute; top: 100px; left:70px; bottom: 20px">
-            <img style="width: 80px" src="{% static 'img/bat.JPG' %}" alt="logo">
-        </div>
-        <div class="image1" style="position:absolute; top: 100px; left:70px; bottom: 20px">
-            <img style="width: 80px"  src="{% static 'img/cat.jpg' %}" alt="logo">
-        </div>
-    </div>
-     <div id = "container_wrap">
-        <div class="container">
-            <header>
-                <img class = "brand_logo" src="{% static 'img/mainlogo.png' %}" alt="logo">
-
-            </header>
-            <form name="login" action="" method="post"> <!--method="post" : 정보를 숨겨서 보낸다-->
-                <input class = "id" type="text" placeholder="전화번호,사용자 이름 또는 이메일"> <!--placeholder : 입력창 안에 text를 넣을 수 있다-->
-                <input class = "pwd" type="password" placeholder="비밀번호">
-                <button class = "loginBtn"><a href="#">로그인</a></button>
-            </form>
-            <div class="or_line">
-                <div class="line"></div>
-                <div class="text">또는</div>
-                <div class="line"></div>
+    <div class="main">
+        <div class="main-top">
+            <div class main-desc>
+                <div class="mainimg">
+                    <div class="subimg">
+                    </div>
+                        <div id = "container_wrap">
+                            <div class="container">
+                            <header>
+                                <img class = "brand_logo" src="{% static 'img/mainlogo.png' %}" alt="logo">
+                            </header>
+                            <form name="login" action="{% url 'user:login' %}" method="post"> <!--method="post" : 정보를 숨겨서 보낸다-->
+                                {% csrf_token %}
+                                <input class = "id" type="text" placeholder="이메일"> <!--placeholder : 입력창 안에 text를 넣을 수 있다-->
+                                <input class = "pwd" type="password" placeholder="비밀번호">
+                                <button class = "loginBtn" type="button">로그인</button>
+                            </form>
+                            <div class="or_line">
+                                <div class="line"></div>
+                                <div class="text">또는</div>
+                                <div class="line"></div>
+                            </div>
+                            <ul class="singup">
+                                <li class ='text' style="font-size: 15px">아직 회원이 아니신가요??</li>
+                                <br>
+                                <li><a href="{% url 'user:singup' %}" >가입하기</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                </div>
             </div>
-            <ul class="singup">
-                <li class ='text' style="font-size: 15px">아직 회원이 아니신가요??</li>
-                <br>
-                <li><a href="{% url 'user:singup' %}" >가입하기</a></li>
-            </ul>
+        </div>
     </div>
-     </div>
     <script src="{% static 'js/login.js' %}"></script>
     <script></script>
     </body>

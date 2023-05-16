@@ -5,7 +5,7 @@ btn.addEventListener("click",function(e){
     if(inputId.includes('@') && inputPw.length > 4){
         document.querySelector(".loginBtn").style.background = "rgb(46, 184, 223)";
     }else{
-        alert("입력해 주세요");
+        alert("아이디나 비밀번호가 틀렸습니다!");
         document.querySelector(".loginBtn").style.background= "default";
     }
     return false; //경고창이 뜨면 넘어가지 않도록 설정

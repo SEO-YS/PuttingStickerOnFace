@@ -12,13 +12,61 @@ a{
 
 body {
     background: #fafafa;
-    width: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   width: 100%;
+  height: 100vh;
 }
+
+.main {
+  width: 1519.2px;
+  height: 700.787px;
+  /* border: 1px solid black; */
+}
+
+.main-top {
+  width: 2000.2px;
+  height: 594.787px;
+  margin-top: 80px;
+  padding-bottom: 32px;
+  position: relative;
+}
+.main-desc {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+     align-content: center;
+
+}
+
+.mainimg {
+  position: absolute;
+  width: 500.312px;
+  height: 450.15px;
+  /* border: 1px solid black; */
+
+  background-image: url(/static/img/mainpage5.png);
+  left: 500px;
+
+
+}
+.subimg {
+  position: relative;
+  background-image: url(/static/img/bear_nose1.jpg);
+  width: 230px;
+  height: 150px;
+  top: 190px;
+  left: 80px;
+
+}
+
 #container_wrap{
-    width: 350px;
+    width: 1500px;
     margin: 0 auto;
-    margin-top: 3rem;
+    margin-top: -10rem;
 }
 
 .container{
@@ -26,7 +74,9 @@ body {
     width: 350px;
     height: 450px;
     border: 1px solid #dbdbdb;
-    margin-bottom: 0.6rem;
+    margin-bottom: 100px;
+    top: 10px;
+
 }
 
 .brand_logo{
@@ -101,9 +151,6 @@ input:nth-child(2){
     font-weight: bold;
     font-size: medium;
     color: white;
-
-
-
 }
 
 

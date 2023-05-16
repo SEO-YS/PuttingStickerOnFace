@@ -23,6 +23,7 @@ app_name='user'
 
 urlpatterns = [
     path('main',uv.main,name='main'),
+    path('login',auth_views.LoginView.as_view(template_name='mainpage.html'),name='login'),
     path('logout',auth_views.LogoutView.as_view(), name='logout'),
     path('singup',uv.singup,name='singup')
 
