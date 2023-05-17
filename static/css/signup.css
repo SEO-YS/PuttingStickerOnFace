@@ -11,25 +11,26 @@ a{
 }
 
 body {
-    background: #fafafa;
-    width: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 130%;
+    height: 100vh;
+    background-size:cover;
 }
 .join_container{
     background: #fff;
-    width: 350px;
-    height: 650px;
+    width: 400px;
+    height: 550px;
     border: 1px solid #dbdbdb;
-    margin: 0 auto;
+    margin: 800px;
     margin-top: 3rem;
+    left: 50px;
 }
 
 .brand_logo{
     display: block;
-    width: 15rem;
+    width: 100px;
     margin: 0 auto;
     padding-top: 1rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.3rem;
 }
 .logo li{
     text-align: center;

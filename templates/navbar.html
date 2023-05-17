@@ -1,7 +1,7 @@
 {% load static %}<!-- 네비게이션바 -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
     <div class="container-fluid">
-        <img style="width: 100px" src="{% static 'img/mainlogo2.png' %}" alt="logo">
+        <img style="width: 80px"   src="{% static 'img/mainlogo1.JPG' %}" alt="logo">
         <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent"
@@ -14,7 +14,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     {% if user.is_authenticated %}
-                    <li><a class="nav-link" href="#">{{ user.username }} (로그아웃)</a></li>
+                    <li><a class="nav-link" href="{% url 'user:logout' %}">{{ user.username }} (로그아웃)</a></li>
                        <li><a class="nav-link" href="#">나만의 저장소</a></li>
                         <a class="nav-link" href="{% url 'user:main' %}">🏚️(HOME)</a>
                     {% else %}

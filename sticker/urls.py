@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.urls import path,include
 import user.views as bv
 
+
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',bv.main,name='main'),
-    path('user',include('user.urls')),
-    path('sticker', include('puttingSticker.urls')),
+    path('user',include('user.urls'))
 
 ]
