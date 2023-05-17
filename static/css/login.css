@@ -44,11 +44,11 @@ body {
 
 .mainimg {
   position: absolute;
-  width: 500.312px;
+  width: 600.312px;
   height: 450.15px;
   /* border: 1px solid black; */
 
-  background-image: url(/static/img/mainpage5.png);
+  background-image: url(/static/img/mainpage6.png);
   left: 500px;
 
 
