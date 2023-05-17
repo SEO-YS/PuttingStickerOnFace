@@ -24,6 +24,6 @@ import user.views as bv
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',bv.main,name='main'),
-    path('user',include('user.urls'))
-
+    path('user',include('user.urls')),
+    path('user', include('puttingSticker.urls')),
 ]
