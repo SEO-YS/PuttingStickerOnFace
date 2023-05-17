@@ -1,12 +1,23 @@
-const btn = document.querySelector(".loginBtn");
-btn.addEventListener("click",function(e){
-    const inputId = document.querySelector('.id').value;
-    const inputPw = document.querySelector('.pwd').value;
-    if(inputId.includes('@') && inputPw.length > 4){
-        document.querySelector(".loginBtn").style.background = "rgb(46, 184, 223)";
-    }else{
-        alert("아이디나 비밀번호가 틀렸습니다!");
-        document.querySelector(".loginBtn").style.background= "default";
+  const images = document.querySelectorAll('.subimg img');
+    let currentImage = 0;
+
+    function showNextImage() {
+      images[currentImage].classList.remove('active');
+      currentImage = (currentImage + 1) % images.length;
+      images[currentImage].classList.add('active');
     }
-    return false; //경고창이 뜨면 넘어가지 않도록 설정
-});
+
+    setInterval(showNextImage, 3000);
+
+function hideLogin() {
+        var loginForm = document.getElementById("login-form");
+        loginForm.style.display = "none";
+    }
+
+function handleLoginResponse(response) {
+        if (response.success) {
+            hideLogin();
+        } else {
+            // Handle login failure
+        }
+    }

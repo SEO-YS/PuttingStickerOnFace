@@ -5,7 +5,7 @@
     <title>SIGN-UP</title>
     <link rel = "stylesheet" href="{% static 'css/signup.css' %}">
     </head>
-    <body>
+    <body class="main-page" style="background-size: cover">
     <div class="join_container">
             <header class = "logo">
                 <img class = "brand_logo" style="width: 100px" src="{% static 'img/mainlogo2.JPG' %}" alt="logo">
@@ -22,13 +22,13 @@
                 <form name="join" action="{% url 'user:signup' %}" method="post">
                     {% csrf_token %}
                     <div class="mb-3">
+                        <div>
+                        <label for="username"></label>
+                        <input class = "name"  name="username" type="text" id="username" placeholder="ID">
+                    </div>
                         <label for="email"></label>
                         <input class = "addEmail" type="text" name="email" id="email" placeholder="이메일 주소"
                                value="{{ form.email.value|default_if_none:'' }}">
-                    </div>
-                    <div>
-                        <label for="username"></label>
-                        <input class = "name"  name="username" type="text" id="username" placeholder="사용자 이름">
                     </div>
                     <div>
                     <label for="password1"></label>
