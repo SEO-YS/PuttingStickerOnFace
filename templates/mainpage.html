@@ -1,10 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block content %}
-    <head>
+<!-- 수정된 위치 -->
+<!-- body태그내부에서 block content를 쓰듯 base 내에서 head를 위한 block 영역을 추가 후 동일한 방식으로 사용(base부분에서 title태그는 삭제)-->
+{% block extrahead %}
     <title>STICKER ON FACE</title>
     <link rel = "stylesheet" href="{% static 'css/login.css' %}">
-    </head>
+{% endblock %}
+{% block content %}
+<!--    기존 코드 위치-->
+<!--    <head>-->
+<!--    <title>STICKER ON FACE</title>-->
+<!--    <link rel = "stylesheet" href="{% static 'css/login.css' %}">-->
+<!--    </head>-->
     <body>
     <div class="main">
         <div class="main-top">
