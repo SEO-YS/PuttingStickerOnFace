@@ -44,35 +44,66 @@ body {
 
 .mainimg {
   position: absolute;
-  width: 600.312px;
-  height: 450.15px;
+  width: 500.312px;
+  height: 550.15px;
   /* border: 1px solid black; */
 
   background-image: url(/static/img/mainpage6.png);
+    background-size: cover;
   left: 500px;
 
 
 }
 .subimg {
   position: relative;
-  background-image: url(/static/img/bear_nose1.jpg);
-  width: 230px;
-  height: 150px;
-  top: 190px;
-  left: 80px;
+  background-image: url(/static/img/jisoo_cat.jpg);
+  background-size: cover;
+  width: 33%;
+  height: 35%;
+  top: 126px;
+  left: 100px;
+
+}
+.subimg1 {
+  position: relative;
+  background-image: url(/static/img/jisoo_bear.jpg);
+  background-size: cover;
+  width: 33%;
+  height: 35%;
+  top: 142px;
+  left: 100px;
+
+}
+.subimg2 {
+  position: relative;
+  background-image: url(/static/img/jisoo_dog.JPG);
+  background-size: cover;
+  width: 33%;
+  height: 35%;
+  top: -358px;
+  left: 286px;
+
+}
+.subimg3 {
+  position: relative;
+  background-image: url(/static/img/jisoo_fox.jpg);
+  background-size: cover;
+  width: 33%;
+  height: 35%;
+  top: -340px;
+  left: 286px;
 
 }
 
 #container_wrap{
     width: 1500px;
     margin: 0 auto;
-    margin-top: -10rem;
+    margin-top: -45rem;
 }
 
 .container{
     background: #fff;
     width: 350px;
-    height: 450px;
     border: 1px solid #dbdbdb;
     margin-bottom: 100px;
     top: 10px;

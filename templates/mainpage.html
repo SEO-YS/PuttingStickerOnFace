@@ -12,6 +12,12 @@
                 <div class="mainimg">
                     <div class="subimg">
                     </div>
+                    <div class="subimg1">
+                    </div>
+                    <div class="subimg2">
+                    </div>
+                    <div class="subimg3">
+                    </div>
                         <div id = "container_wrap">
                             <div class="container">
                             <header>
@@ -19,9 +25,18 @@
                             </header>
                             <form name="login" action="{% url 'user:login' %}" method="post"> <!--method="post" : 정보를 숨겨서 보낸다-->
                                 {% csrf_token %}
-                                <input class = "id" type="text" placeholder="이메일"> <!--placeholder : 입력창 안에 text를 넣을 수 있다-->
-                                <input class = "pwd" type="password" placeholder="비밀번호">
-                                <button class = "loginBtn" type="button">로그인</button>
+                                <input type="hidden" name="next" value="{{ next }}">
+                                <div>
+                                <label for="email"></label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="이메일"
+                                       value="{{ form.email.value|default_if_none:'' }}">
+                                </div>
+                                <div>
+                                    <label for="password"></label>
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="비밀번호"
+                                           value="{{ form.password.value|default_if_none:'' }}">
+                                </div>
+                                <button class = "loginBtn" type="submit">로그인</button>
                             </form>
                             <div class="or_line">
                                 <div class="line"></div>
