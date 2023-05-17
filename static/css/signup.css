@@ -26,10 +26,10 @@ body {
 
 .brand_logo{
     display: block;
-    width: 15rem;
+    width: 100px;
     margin: 0 auto;
     padding-top: 1rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.3rem;
 }
 .logo li{
     text-align: center;

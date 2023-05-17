@@ -4,24 +4,22 @@
     <head>
     <title>STICKER ON FACE</title>
     <link rel = "stylesheet" href="{% static 'css/login.css' %}">
+
     </head>
-    <body>
+    <body class="main-page">
     <div class="main">
         <div class="main-top">
             <div class main-desc>
                 <div class="mainimg">
-                    <div class="subimg">
-                    </div>
-                    <div class="subimg1">
-                    </div>
-                    <div class="subimg2">
-                    </div>
-                    <div class="subimg3">
+                    <div class="subimg" id="subimg">
+                        <img src="{% static 'img/mainimg1.JPG' %}">
+                        <img src="{% static 'img/mainimg2.png' %}">
+                        <img src="{% static 'img/mainimg3.png' %}">
                     </div>
                         <div id = "container_wrap">
                             <div class="container">
                             <header>
-                                <img class = "brand_logo" src="{% static 'img/mainlogo.png' %}" alt="logo">
+                                <img class = "brand_logo" src="{% static 'img/mainlogo2.JPG' %}" alt="logo">
                             </header>
                             <form name="login" action="{% url 'user:login' %}" method="post"> <!--method="post" : 정보를 숨겨서 보낸다-->
                                 {% csrf_token %}
@@ -54,9 +52,19 @@
             </div>
         </div>
     </div>
-    <script src="{% static 'js/login.js' %}"></script>
-    <script></script>
-    </body>
+    <script>
+  const images = document.querySelectorAll('.subimg img');
+let currentImage = 0;
+
+function showNextImage() {
+  images[currentImage].classList.remove('active');
+  currentImage = (currentImage + 1) % images.length;
+  images[currentImage].classList.add('active');
+}
+
+setInterval(showNextImage, 3000);
+    </script>
+</body>
 
 
 {% endblock %}

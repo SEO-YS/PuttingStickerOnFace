@@ -11,9 +11,10 @@ a{
 }
 
 body {
-    background: #fafafa;
-   width: 100%;
-  height: 100vh;
+    width: 130%;
+    height: 100vh;
+    background-size:cover;
+
 }
 
 .main {
@@ -44,61 +45,44 @@ body {
 
 .mainimg {
   position: absolute;
-  width: 500.312px;
-  height: 550.15px;
-  /* border: 1px solid black; */
+  width: 600.312px;
+  height: 615.15px;
 
-  background-image: url(/static/img/mainpage6.png);
+  background-image: url(/static/img/mainpagesub.png);
     background-size: cover;
-  left: 500px;
+  left: 300px;
 
 
 }
 .subimg {
   position: relative;
-  background-image: url(/static/img/jisoo_cat.jpg);
-  background-size: cover;
-  width: 33%;
-  height: 35%;
-  top: 126px;
-  left: 100px;
+  width: 73%;
+  height: 80%;
+  top: 80px;
+  left: 80px;
+  display: flex;
+  overflow: hidden;
 
 }
-.subimg1 {
-  position: relative;
-  background-image: url(/static/img/jisoo_bear.jpg);
-  background-size: cover;
-  width: 33%;
-  height: 35%;
-  top: 142px;
-  left: 100px;
-
+.subimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
-.subimg2 {
-  position: relative;
-  background-image: url(/static/img/jisoo_dog.JPG);
-  background-size: cover;
-  width: 33%;
-  height: 35%;
-  top: -358px;
-  left: 286px;
-
+.subimg img.active {
+  opacity: 1;
 }
-.subimg3 {
-  position: relative;
-  background-image: url(/static/img/jisoo_fox.jpg);
-  background-size: cover;
-  width: 33%;
-  height: 35%;
-  top: -340px;
-  left: 286px;
 
-}
 
 #container_wrap{
-    width: 1500px;
+    width: 1700px;
     margin: 0 auto;
-    margin-top: -45rem;
+    margin-top: -27rem;
 }
 
 .container{
@@ -112,7 +96,7 @@ body {
 
 .brand_logo{
     display: block;  /*이미지는 인라인요소라 block요소로 바꿔야함(margin안먹힘)*/
-    width: 200px;
+    width: 130px;
     margin: 0 auto;
     padding-top: 2rem;
     padding-bottom: 1rem;
