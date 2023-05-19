@@ -16,7 +16,7 @@
                         <img src="{% static 'img/mainimg3.png' %}">
                     </div>
                         <div id = "container_wrap">
-                            <div class="container">
+                            <div class="container" style="width: 300px;">
                             <header>
                                 <a href="{% url 'user:main'  %}">
                                 <img class = "brand_logo" src="{% static 'img/mainlogo2.JPG' %}" alt="logo"></a>
@@ -42,9 +42,8 @@
                                 <div class="line"></div>
                             </div>
                             <ul class="singup">
-                                <li class ='text' style="font-size: 15px">아직 회원이 아니신가요??</li>
-                                <br>
-                                <li><a href="{% url 'user:signup' %}" >가입하기</a></li>
+                                <li class ='text' style="font-size: 15px; margin-left: -30px; margin-bottom: 20px;">아직 회원이 아니신가요??</li>
+                                <li style="margin-left: -30px"><a href="{% url 'user:signup' %}" >가입하기</a></li>
                             </ul>
                                 {% endif %}
                             </div>

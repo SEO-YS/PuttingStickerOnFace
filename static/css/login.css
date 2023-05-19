@@ -159,7 +159,6 @@ input:nth-child(2){
     display: block;
     width: 250px;
     height: 30px;
-    margin: 0 auto;
     border: none;
     border-radius: 3px;
     background: rgb(190, 230, 241);
